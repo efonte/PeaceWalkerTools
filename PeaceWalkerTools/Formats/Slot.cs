@@ -11,7 +11,7 @@ namespace PeaceWalkerTools
         public static void Unpack(string location)
         {
             var keyPath = Path.Combine(location, "SLOT.KEY");
-            var dataPath = Path.Combine(location, "SLOT.DAT.original");
+            var dataPath = Path.Combine(location, "SLOT.DAT");
 
 
             Hash hash;

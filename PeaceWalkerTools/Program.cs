@@ -7,23 +7,37 @@ namespace PeaceWalkerTools
     {
         static void Main(string[] args)
         {
-            var iniFile = new InitializationFile("PeaceWalkerTools.ini");
+            //var iniFile = new InitializationFile("PeaceWalkerTools.ini");
 
-            Settings.Working = iniFile["Global"]["Working"] ?? ".";
-            Settings.SourceFolder = iniFile["Global"]["SourceLocation"];
-            Settings.SourceUserFolder = Path.Combine(iniFile["Global"]["SourceLocation"], "USRDIR");
-            Settings.SourceSystemFolder = Path.Combine(iniFile["Global"]["SourceLocation"], "SYSDIR");
-            Settings.InstallFolder = iniFile["Global"]["InstallLocation"];
-            Settings.TranslationFolder = iniFile["Global"]["TranslationFolder"];
+            //Settings.Working = iniFile["Global"]["Working"] ?? ".";
+            //Settings.SourceFolder = iniFile["Global"]["SourceLocation"];
+            //Settings.SourceUserFolder = Path.Combine(iniFile["Global"]["SourceLocation"], "USRDIR");
+            //Settings.SourceSystemFolder = Path.Combine(iniFile["Global"]["SourceLocation"], "SYSDIR");
+            //Settings.InstallFolder = iniFile["Global"]["InstallLocation"];
+            //Settings.TranslationFolder = iniFile["Global"]["TranslationFolder"];
 
-            if (Debugger.IsAttached)
-            {
-                Test();
-            }
-            else
-            {
-                Process(args);
-            }
+            //if (Debugger.IsAttached)
+            //{
+            //    Test();
+            //}
+            //else
+            //{
+            //    Process(args);
+            //}
+            SlotData.Unpack("mgspw/psp");
+            //SlotFile.Unpack("SLOT/09832000_972F40EC.slot");
+
+            //string[] files = System.IO.Directory.GetFiles("SLOT", "*.slot");
+            //foreach (var file in files)
+            //{
+            //    SlotFile.Unpack(file);
+            //}
+
+            //string[] files = System.IO.Directory.GetFiles("SLOT", "*.txp");
+            //foreach (var file in files)
+            //{
+            //    TXP.Unpack(file);
+            //}
         }
 
         private static void Process(string[] args)
